@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
   
    get '/' => 'static_pages#home'
-   get '/gallery' => 'photos#index'
-   post '/gallery' => 'photos#create'
-   get '/merch' => 'products#index'
-   post '/merch' => 'products#create'
+   get '/gallery' => 'static_pages#gallery'
+   get '/merch' => 'static_pages#merch'
+   get '/events' => 'static_pages#events'
 
    get '/home' => 'static_pages#home'
-   get '/reviews' => 'static_pages#reviews'
    get '/about' => 'static_pages#about'
    get '/classes' => 'static_pages#classes'
 
+
 end
+ 
