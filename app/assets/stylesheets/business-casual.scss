@@ -6,11 +6,10 @@
 
 body {
   font-family: 'Lora';
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 23, 15, 0.65))), url("../img/bg.jpg");
-  background: linear-gradient(rgba(47, 23, 15, 0.65)), url("../img/bg.jpg");
+  background-image: url("background.jpg");
   background-attachment: fixed;
   background-position: center;
-  background-size: cover;
+  background-size: auto;
 }
 
 h1,
@@ -48,6 +47,8 @@ p {
   font-size: 5rem;
   font-weight: 100;
   line-height: 4rem;
+  color: #DDA825;
+  font-weight: bold;
 }
 
 .page-section {
@@ -78,6 +79,8 @@ p {
 #mainNav {
   background-color: black;
   font-family: 'Raleway';
+  border-top: 2px solid #DDA825;
+  border-bottom: 2px solid #DDA825;
 }
 
 #mainNav .navbar-brand {
@@ -90,7 +93,7 @@ p {
 }
 
 #mainNav .navbar-nav .nav-item.active .nav-link {
-  color: #e6a756;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 @media (min-width: 992px) {
@@ -101,7 +104,7 @@ p {
     color: rgba(255, 255, 255, 0.4);
   }
   #mainNav .navbar-nav .nav-item.active .nav-link:hover {
-    color: #e6a756;
+    color: gray;
   }
 }
 
@@ -188,7 +191,8 @@ p {
   .product-item .product-item-img {
     position: relative;
     z-index: 0;
-    max-width: 60vw;
+    /*max-width: 60vw;*/
+    width: 50%;
   }
   .product-item .product-item-description {
     position: relative;
@@ -230,7 +234,7 @@ p {
 }
 
 .text-primary {
-  color: #e6a756 !important;
+  color: black !important;
 }
 
 .bg-primary {
@@ -243,15 +247,15 @@ p {
 }
 
 .btn-primary {
-  background-color: #e6a756;
-  border-color: #e6a756;
+  background-color: black;
+  border-color: gray;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background-color: #df902a;
-  border-color: #df902a;
+  background-color: gray;
+  border-color: gray;
 }
 
 .font-weight-light {
   font-weight: 100 !important;
-}
+} 
