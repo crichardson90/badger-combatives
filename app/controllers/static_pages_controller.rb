@@ -26,4 +26,8 @@ class StaticPagesController < ApplicationController
   def merch
     
   end
+
+  def contact
+    
+  end
 end

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
    get '/home' => 'static_pages#home'
    get '/about' => 'static_pages#about'
    get '/classes' => 'static_pages#classes'
+   get '/contact' => 'static_pages#contact'
 
 
 end
