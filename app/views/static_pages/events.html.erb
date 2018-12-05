@@ -1,0 +1,34 @@
+<div class = "event-container">
+</div>
+
+<script type="text/javascript">
+$(function() {
+  var facebookUrl = "https://graph.facebook.com/v3.2/me?fields=id,name,events&access_token=<%= ENV['ACCESS_TOKEN'] %>"
+  var $container = $(".event-container");
+
+  var options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit'};
+  
+  $.ajax({
+      url: facebookUrl,
+      }).done(function(data) {
+        var events = data["events"]["data"];
+        for(var i = 0; i < events.length; i++) {
+          // console.log(events[i].place.location.state);
+          // console.log(events[i]);
+          var startTime = new Date(events[i].start_time);
+          var endTime = new Date(events[i].end_time);
+
+          $container.append(`
+            <div class="event">
+              <h3>${events[i].name}</h3> 
+              <h4>${events[i].description}</h4>
+              <h5>${events[i].place.location.street} ${events[i].place.location.city} ${events[i].place.location.state} ${events[i].place.location.zip}</h5>
+              Start Time: ${startTime.toLocaleDateString("en-US", options )}
+              <br>
+              End Time: ${endTime.toLocaleDateString("en-US", options )}
+            </div>`
+          )
+        }   
+    });
+  });
+</script>
