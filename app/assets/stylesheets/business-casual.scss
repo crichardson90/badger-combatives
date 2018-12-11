@@ -47,7 +47,7 @@ p {
   font-size: 5rem;
   font-weight: 100;
   line-height: 4rem;
-  color: #DDA825;
+  color: #DE100E;
   font-weight: bold;
 }
 
@@ -74,17 +74,18 @@ p {
 
 .bg-faded {
   background-color: rgba(255, 255, 255, 0.85);
+  margin-top: 50px;
 }
 
 #mainNav {
   background-color: black;
   font-family: 'Raleway';
-  border-top: 2px solid #DDA825;
-  border-bottom: 2px solid #DDA825;
+  border-top: 2px solid #DE100E;
+  border-bottom: 2px solid #DE100E;
 }
 
 #mainNav .navbar-brand {
-  color: #e6a756;
+  color: #DE100E;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
@@ -232,6 +233,8 @@ p {
 
 .footer {
   background-color: black;
+    border-top: 2px solid #DE100E;
+  border-bottom: 2px solid #DE100E;
 }
 
 .text-primary {
