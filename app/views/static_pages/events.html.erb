@@ -5,6 +5,7 @@
 $(function() {
   var facebookUrl = "https://graph.facebook.com/v3.2/me?fields=id,name,events&access_token=<%= ENV['ACCESS_TOKEN'] %>"
   var $container = $(".event-container");
+  var $eventList = $(".event-list")
 
   var options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit'};
   
@@ -18,20 +19,57 @@ $(function() {
           var startTime = new Date(events[i].start_time);
           var endTime = new Date(events[i].end_time);
 
-          $container.append(`
-            <div class="event">
-              <h3>${events[i].name}</h3> 
-              <h4>${events[i].description}</h4>
-              <h5>${events[i].place.location.street} ${events[i].place.location.city} ${events[i].place.location.state} ${events[i].place.location.zip}</h5>
-              Start Time: ${startTime.toLocaleDateString("en-US", options )}
-              <br>
-              End Time: ${endTime.toLocaleDateString("en-US", options )}
-            </div>`
-          )
+          // $container.append(`
+          //   <div class="event">
+          //     <h3>${events[i].name}</h3> 
+          //     <h4>${events[i].description}</h4>
+          //     <h5>${events[i].place.location.street} ${events[i].place.location.city} ${events[i].place.location.state} ${events[i].place.location.zip}</h5>
+          //     Start Time: ${startTime.toLocaleDateString("en-US", options )}
+          //     <br>
+          //     End Time: ${endTime.toLocaleDateString("en-US", options )}
+          //   </div>`
+          // )
+
+          $eventList.append(`<li>
+            <time datetime="2014-07-20">
+              ${startTime.toLocaleDateString("en-US", options )}
+            </time>
+            <div class="info">
+              <h2 class="title">${events[i].name}</h2>
+              <p class="desc">${events[i].description}</p>
+              <h5 class="desc">${events[i].place.location.street} ${events[i].place.location.city} ${events[i].place.location.state} ${events[i].place.location.zip}</h5>
+            </div>
+            <div class="social">
+              <ul>
+                <li class="facebook" style="width:33%;"><a href="https://www.facebook.com/pg/badgercombatives/events/"><span class="fa fa-facebook"></span></a></li>
+              </ul>
+            </div>
+          </li>`);
+
         }   
     });
   });
-</script>
+</script> 
 
 
 
+
+
+
+<!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
+<!------ Include the above in your HEAD tag ---------->
+
+    <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <ul class="event-list">
+
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>

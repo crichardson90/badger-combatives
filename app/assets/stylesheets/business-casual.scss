@@ -249,8 +249,9 @@ p {
 
 .footer {
   background-color: black;
-    border-top: 2px solid #DE100E;
+  border-top: 2px solid #DE100E;
   border-bottom: 2px solid #DE100E;
+  height: 89px;
 }
 
 .text-primary {
@@ -289,4 +290,8 @@ p {
   .day-of-week {
     text-align: right;
   }
+}
+
+footer p {
+  margin-top: -5px;
 }
