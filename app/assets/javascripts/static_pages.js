@@ -16,4 +16,12 @@ $(document).ready(function() {
       modal.fadeOut();
     }
   }
+
+  $(window).resize(function() {
+    if(window.innerWidth > 991) {
+      $('nav').removeClass('fixed-top');
+    } else {
+      $('nav').addClass('fixed-top');
+    }
+  });
 })
