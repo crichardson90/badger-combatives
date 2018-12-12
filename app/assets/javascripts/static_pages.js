@@ -20,8 +20,10 @@ $(document).ready(function() {
   $(window).resize(function() {
     if(window.innerWidth > 991) {
       $('nav').removeClass('fixed-top');
+      $('#main').removeClass('fixed-top-margin');
     } else {
       $('nav').addClass('fixed-top');
+      $('#main').addClass('fixed-top-margin');
     }
   });
 })
