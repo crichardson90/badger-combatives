@@ -12,6 +12,11 @@ body {
   background-size: auto;*/
 }
 
+@font-face {
+  font-family: 'Fighting Spirit TBS';
+  src: url('fighting_spirit_TBS_bold.ttf') format('truetype');
+}
+
 body:before {
   content: "";
   display: block;
