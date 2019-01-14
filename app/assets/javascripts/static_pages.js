@@ -9,13 +9,9 @@ $(document).ready(function() {
     modalImg.attr("src", this.src);
   });
 
-  window.onclick = function(event) {
-    var sameModal = document.getElementById("myModal");
-
-    if (event.target === sameModal) {
-      modal.fadeOut();
-    }
-  }
+  modal.click(function(event) {
+    modal.fadeOut();
+  })
 
   $(window).resize(function() {
     if(window.innerWidth > 991) {
